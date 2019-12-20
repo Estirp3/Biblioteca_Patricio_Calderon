@@ -29,17 +29,17 @@ public class Home_act extends AppCompatActivity {
 
 
 
-    // estas son las instrucciones de mi slider.
+
     public void Instrucciones(int i)
     {
         ImageView view = new ImageView(this); // obtengo mis imagenes.
         view.setBackgroundResource(i);
 
-        vf.addView(view); // añado mis imagenes.
-        vf.setFlipInterval(2800); // velocidad de desplazamiento.
-        vf.setAutoStart(true); //inicia de forma automatica.
+        vf.addView(view);
+        vf.setFlipInterval(2800);
+        vf.setAutoStart(true);
 
-        // sentido del slider.
+
         vf.setInAnimation(this, android.R.anim.slide_in_left);
         vf.setOutAnimation(this, android.R.anim.slide_out_right);
     }
@@ -68,6 +68,12 @@ public class Home_act extends AppCompatActivity {
         String[] datos = {"Farenheit", "Revival", "Tesla"};
         Intent i = new Intent(this, Libros_act.class);
         i.putExtra("libros", datos);
+        startActivity(i);
+    }
+
+    public void base(View v)
+    {
+        Intent i = new Intent(this, Base_act.class);
         startActivity(i);
     }
 
